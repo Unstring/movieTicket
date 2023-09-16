@@ -1,4 +1,3 @@
-import('preline');
 import "./index.css"
 import * as ReactDOM from "react-dom/client";
 import {
@@ -6,6 +5,8 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import { DarkThemeToggle, Flowbite } from 'flowbite-react';
+
 
 import Nav from "./components/utils/Nev"
 import Foot from "./components/utils/Foot"
@@ -23,11 +24,14 @@ import UpcomingMovies from "./components/UpcomingMovies/index"
 const AppLayout = () => {
   return (
     <>
+    <Flowbite>
       {/* <Provider store={store}> */}
       <Nav />
+      {/* <DarkThemeToggle /> */}
       <Outlet />
       <Foot />
       {/* </Provider> */}
+    </Flowbite>
     </>
   );
 };

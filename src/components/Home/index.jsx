@@ -1,11 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Header from './Header'
+import React from "react";
+import Carausel from "./Carausel";
 
 function index() {
   return (
-    <Header/>
-  )
+    <>
+    <div className="flex h-[400px]">
+      <Carausel />
+    </div>
+    </>
+  );
 }
 
-export default index
+export default index;
