@@ -1,10 +1,17 @@
 "use client";
-
-import { Dropdown, Avatar, Button, Navbar, DarkThemeToggle, ListGroup } from "flowbite-react";
+import { Link } from "react-router-dom";
+import {
+  Dropdown,
+  Avatar,
+  Button,
+  Navbar,
+  DarkThemeToggle,
+  ListGroup,
+} from "flowbite-react";
 import { useState } from "react";
 
 export default function NavbarWithCTAButton() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Navbar fluid>
       <Navbar.Brand>
@@ -19,7 +26,7 @@ export default function NavbarWithCTAButton() {
       </Navbar.Brand>
       {isLoggedIn ? (
         <div className="flex md:order-2 gap-2">
-          <DarkThemeToggle/>
+          <DarkThemeToggle />
           <Dropdown
             inline
             label={
@@ -46,19 +53,16 @@ export default function NavbarWithCTAButton() {
         </div>
       ) : (
         <div className="flex md:order-2 gap-2">
-        <DarkThemeToggle />
+          <DarkThemeToggle />
           <Button>Get started</Button>
           <Navbar.Toggle />
         </div>
       )}
       <Navbar.Collapse>
-        <Navbar.Link active href="#">
-          <p>Home</p>
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <Link to="/"><Navbar.Link active>Home</Navbar.Link></Link>
+        <Link to="#"><Navbar.Link >Latest movies</Navbar.Link></Link>
+        <Link to="#"><Navbar.Link >Upcoming movies</Navbar.Link></Link>
+        <Link to="#"><Navbar.Link >Events</Navbar.Link></Link>
       </Navbar.Collapse>
     </Navbar>
   );

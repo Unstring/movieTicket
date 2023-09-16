@@ -1,8 +1,9 @@
-import React from 'react'
-
+import Details from "./Detail"
 function index() {
   return (
-    <div>index</div>
+    <div className=' w-full'>
+    <Details/>
+    </div>
   )
 }
 
