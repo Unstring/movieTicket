@@ -20,17 +20,19 @@ import LatestMovies from "./components/LatestMovies/index"
 import FinalBooking from "./components/FinalBooking/index"
 import UpcomingMovies from "./components/UpcomingMovies/index"
 
+import { store } from './Redux/Store'
+import { Provider } from 'react-redux'
 
 const AppLayout = () => {
   return (
     <>
     <Flowbite>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
       <Nav />
       {/* <DarkThemeToggle /> */}
       <Outlet />
       <Foot />
-      {/* </Provider> */}
+      </Provider>
     </Flowbite>
     </>
   );

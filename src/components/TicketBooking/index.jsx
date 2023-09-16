@@ -1,8 +1,11 @@
 import React from 'react'
+import TicketBooking from './TicketBooking'
 
 function index() {
   return (
-    <div>index</div>
+    <>
+    <TicketBooking/>
+    </>
   )
 }
 

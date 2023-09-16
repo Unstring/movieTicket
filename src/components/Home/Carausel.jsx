@@ -7,23 +7,23 @@ export default function PauseOnHovering() {
     <Carousel pauseOnHover indicators={false} slideInterval={500}>
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+        src="./ph1.jpg"
       />
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+        src="./ph2.jpg"
       />
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+        src="./ph3.jpg"
       />
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
+        src="./ph4.jpg"
       />
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+        src="./ph5.jpg"
       />
     </Carousel>
   )

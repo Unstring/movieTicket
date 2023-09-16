@@ -59,10 +59,10 @@ export default function NavbarWithCTAButton() {
         </div>
       )}
       <Navbar.Collapse>
-        <Link to="/"><Navbar.Link active>Home</Navbar.Link></Link>
-        <Link to="#"><Navbar.Link >Latest movies</Navbar.Link></Link>
-        <Link to="#"><Navbar.Link >Upcoming movies</Navbar.Link></Link>
-        <Link to="#"><Navbar.Link >Events</Navbar.Link></Link>
+        <Link className="block py-2 pr-4 pl-3 md:p-0 bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700" to="/">Home</Link>
+        <Link className="block py-2 pr-4 pl-3 md:p-0 bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700" to="/latestmovies">Latest movies</Link>
+        <Link className="block py-2 pr-4 pl-3 md:p-0 bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700" to="/upcomingmovies">Upcoming movies</Link>
+        <Link className="block py-2 pr-4 pl-3 md:p-0 bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700" to="/events">Events</Link>
       </Navbar.Collapse>
     </Navbar>
   );

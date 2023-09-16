@@ -1,8 +1,11 @@
 import React from 'react'
+import FinalBooking from './FinalBooking'
 
 function index() {
   return (
-    <div>index</div>
+    <>
+    <FinalBooking/>
+    </>
   )
 }
 

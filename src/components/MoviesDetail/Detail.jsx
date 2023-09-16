@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function HorizontalCard() {
   return (
-    <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-4 md:mx-10">
+    <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-4 md:mx-10 py-32">
     <Card
       imgAlt="Meaningful alt text for an image that is not purely decorative"
-      imgSrc="https://www.flowbite-react.com/images/blog/image-1.jpg"
+      imgSrc="./ph2.jpg"
     >
-           <p>3 hours</p>
+           <p className="font-normal text-gray-700 dark:text-gray-400">3 hours</p>
            <div className="mb-5 mt-2.5 flex items-center">
             <svg
               className="h-5 w-5 text-yellow-300"
@@ -66,7 +66,6 @@ export default function HorizontalCard() {
           <p>16 sep 2023</p>
         </h5>
         <p className="font-normal text-gray-700 dark:text-gray-400">
-          <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
             officiis inventore eveniet quibusdam aliquid eaque amet voluptatum?
             Beatae hic veritatis eligendi cumque atque. Id doloremque vero
@@ -75,9 +74,7 @@ export default function HorizontalCard() {
             reiciendis, aperiam illo facere minus error consequuntur blanditiis
             sint ab vero adipisci nobis sequi. Atque quidem a temporibus vitae
             cum ab corrupti provident, blanditiis debitis numquam, accusamus
-            deserunt perferendis ipsa ducimus quo odit vel.{" "}
-          </p>
-          
+            deserunt perferendis ipsa ducimus quo odit vel.{" "}          
         </p>
         <Link to="/ticketbooking">
         <Button>Book Now</Button>
