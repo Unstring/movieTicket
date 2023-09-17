@@ -1,7 +1,6 @@
 import React from "react";
 import MovieCard from "../Home/MovieCard";
 
-import LatestMovies from "../../Redux/LatestMovies";
 import { useSelector, useDispatch } from "react-redux";
 import {putData} from "../../Redux/LatestMovies"
 import axios from "axios";
@@ -10,14 +9,16 @@ function index() {
   const allLatestMovies = useSelector((state) => state.latestMovies.value);
   const dispatch = useDispatch();
 
-  axios
-    .get(
-      "http://3.17.216.66:4000/latest"
-    )
-    .then((response) => {
-      dispatch(putData(response.data));
-    })
-    .catch();
+  if (allLatestMovies.length === 0) {
+    axios
+      .get(
+        "http://3.17.216.66:4000/latest"
+      )
+      .then((response) => {
+        dispatch(putData(response.data));
+      })
+      .catch();
+  }
 
   return (
     <>

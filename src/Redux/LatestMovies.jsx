@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: [
-    {
-        "_id": "5ab12666f36d2879268f2902",
-        "name": "Death Wish",
-        "language": "ENGLISH",
-        "type": "Action Crime Thriller",
-        "rate": 3.2,
-        "imageUrl": "https://image.ibb.co/gC9PfH/dw.jpg"
-    }
+    // {
+    //     "_id": "5ab12666f36d2879268f2902",
+    //     "name": "Death Wish",
+    //     "language": "ENGLISH",
+    //     "type": "Action Crime Thriller",
+    //     "rate": 3.2,
+    //     "imageUrl": "https://image.ibb.co/gC9PfH/dw.jpg"
+    // }
 ],
 };
 

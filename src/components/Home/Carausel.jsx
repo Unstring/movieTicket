@@ -2,29 +2,24 @@
 
 import { Carousel } from 'flowbite-react';
 
-export default function PauseOnHovering() {
+export default function PauseOnHovering({allMovies}) {
+
   return (
     <Carousel pauseOnHover indicators={false} slideInterval={500}>
-      <img
+      {
+        allMovies.length == 0 ? (
+<>ye khali h
+</>
+        ):(
+          allMovies.map((v,i)=>(
+            <img
+            key={i}
         alt="..."
-        src="./ph1.jpg"
+        src={v.imageUrl}
       />
-      <img
-        alt="..."
-        src="./ph2.jpg"
-      />
-      <img
-        alt="..."
-        src="./ph3.jpg"
-      />
-      <img
-        alt="..."
-        src="./ph4.jpg"
-      />
-      <img
-        alt="..."
-        src="./ph5.jpg"
-      />
+          ))
+        )
+      }
     </Carousel>
   )
 }
