@@ -1,22 +1,21 @@
 import React from "react";
 import Events from "./Events";
 import { useSelector, useDispatch } from "react-redux";
-import {putData} from "../../Redux/EventSlice"
+import { putData } from "../../Redux/EventSlice";
 import axios from "axios";
 
 function index() {
   const allEvents = useSelector((state) => state.events.value);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  axios.get("http://3.17.216.66:4000/events").then(
-(response)=>{
-  dispatch(putData(response.data));
-}
-  ).catch(
-
-  )
-
-
+  axios
+    .get(
+      "http://3.17.216.66:4000/events"
+    )
+    .then((response) => {
+      dispatch(putData(response.data));
+    })
+    .catch();
 
   return (
     <>
@@ -24,11 +23,10 @@ function index() {
         {allEvents.length == 0 ? (
           <div>bhai khali h</div>
         ) : (
-          <>{
-            allEvents.map((v)=>(
+          <>
+            {allEvents.map((v) => (
               <Events allEvents={v} />
-            ))
-          }
+            ))}
           </>
         )}
       </div>
